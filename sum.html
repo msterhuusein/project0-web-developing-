@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> sum </title>
+  <script type = "text/javascript">
+ function roll(){
+  //create variables for form elements
+
+  var spnFinal = document.getElementById("spnFinal");
+  var spnFinal2 = document.getElementById("spnFinal2");
+  //get random number
+  var final = Math.ceil(Math.random()*100);
+  var final2 = Math.ceil(Math.random()*100);
+  spnFinal.innerHTML = final;
+  spnFinal2.innerHTML = final2;
+
+ } // end roll
+ </script>
+ <script type = "text/javascript">
+function check(){
+ //create variables for form elements
+
+ var spnFinalAns = document.getElementById("spnFinalAns");
+//var testa = document.getElementById("testa");
+// <% if(<span id = "spnFinal"/span> + <span id = "spnFinal2"/span> == <span id = "answer"/span>){ %>
+  var final3 = "correct";
+  var input1 = document.getElementById("input1").value
+  var input2 = document.getElementById("input2").value
+  for(i=0; i<input2; i++){
+    input1++;
+  }
+if(input1 == document.getElementById("answer").value){
+
+      var final3 = "correct"
+
+ }
+  else {
+
+       final3 = "not correct"
+  }
+
+  spnFinalAns.innerHTML = final3;
+  // testa.innerHTML = test
+
+} // end roll
+
+function getvalue(){
+  var input1 = document.getElementById("input1").value
+  var input2 = document.getElementById("input2").value
+  for(i=0; i<input2; i++){
+    input1++;
+  }
+
+  alert("the number is:" + input1);
+}
+</script>
+</head>
+
+<body>
+  <form>
+   <fieldset>
+  <!-- <form action="sum.html" method="post">
+<?php
+$random =rand(1,100)
+?>
+  <(int) math.random()*100 + 1> + <(int) math.random()*100 + 1>
+  </form> -->
+    <span id = "spnFinal">0</span> +  <span id = "spnFinal2">0</span>
+    <button type = "button"
+   onclick = "roll()">
+  roll the dice
+ </button>
+ <hr>
+ Enter the first input:
+ <input type="int" name="input1" id = "input1">
+ <hr>
+ Enter the seconde input:
+ <input type="int" name="input2" id = "input2">
+ <hr>
+ <input type="int" name="answer" id = "answer">
+ <span id = "spnFinalAns" >correct</span>
+ <!-- <span id = "testa" >testb</span> -->
+ <button type="button"
+  onclick = "check()">
+
+  Answer
+
+</button>
+<hr>
+<button type = "button"
+ onclick = "getvalue()">
+ get value
+ </button>
+  </fieldset>
+</form>
+</body>
+</html>
